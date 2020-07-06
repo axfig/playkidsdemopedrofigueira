@@ -1,17 +1,31 @@
 # match3-test
 
-![Image description](https://raw.githubusercontent.com/PlayKids/match3-test/master/ComboGif.gif?token=ACIXP4Y4NCTOIHSWPRWIE3C65JSLU)
+**Introdução**
 
-**Game concept**
+Olá, pessoal da Playkids!
+Eu fiz este teste da forma que acredito ser mais adequada - imaginando o jogo como se fosse um produto completo e fechado.
 
-There are gems of different colors on a grid. Players have to move these gems up down left right to form a row or column of same colored 3 or more gems. When the player match gems of same kind, they gets destroyed and player get points for it. 
-Everytime the player scores, the gems need to be moved down and freeing up place for new gems that will be automaticly generated on top.
+Isso significa que trabalhei pensando em início, meio e fim. Assim como dei o melhor acabamento possível dentro do tempo em que me restringi a realizar o desenvolvimento (uma semana com meu tempo livre, aprox. 25h de trabalho.
 
-**Rules**
+Eu nunca fiz um match 3 antes, então tive que fazer algumas pesquisas de Game Design antes de botar a mão no código. As decisões e diretrizes oriundas desta pesquisa estão listadas logo abaixo.
 
-- Game must be coded in C# using Unity 2018 or later
-- After every change in the board the game must evaluate if there is possible moves and shuffle gems if needed.
-- Every round must last 2 minutes and have a points goal that will bee increased after the conclusion of each round.
-- Game must have sound and make use of the sprites and particles of this repository. 
-- Be aware that the board and UI must works in differenct resolutions and aspect ratio (Portrait).
-- Delivery: the project must be uploaded into a github repository
+Para mim é muito importante que o projeto tenha um bom acabamento, com animações responsivas e movimentação fluida. Gosto muito que o jogo seja bem "juicy" então caprichei nas animações de interface, que é uma das coisas que mais gosto de fazer.
+
+Espero que vocês gostem!
+
+**Metodologia e features**
+
+- Jogo Feito em C# com Unity 2019.4.2f1
+
+- Toda vez que o tabuleiro detecta que encontrou uma situação sem solução, ele se re-embaralha. Foram utilizados dois critérios para determinar se cada peça indivudualmente pode ser resolvida. Para tal ela precisa A) ter um par de seu mesmo tipo e ao mesmo tempo, na direção oposta, ter uma outra peça de seu mesmo tipo na vizinhança. B) estar cercada de 3 ou mais peças do mesmo tipo.
+
+- Todos os rounds tem dois minutos e a pontuação mínima necessária aumenta conforme as fases passam. Além disso, novas peças são introduzidas da fase 01 até a fase 04. Gerando assim dois critérios de dificuldade
+
+- Foram utilizados SOMENTE as sprites e sons do projeto.
+
+- Funciona em landscape e portrait, com input configurado para operar em mobile também.
+
+- Pontuação: A) Permite pontuação de 4+, gerando um bônus por cada peça extra destruída. B) Permite pontuação em T, ou seja, caso dois grupos de match se encontrem de forma perpendicular.
+
+- Menu de pause que não permite olhar o tabuleiro.
+

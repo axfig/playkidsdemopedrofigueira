@@ -3048,17 +3048,17 @@ MonoBehaviour:
   stageConditions:
   - requiredScore: 3000
     gems: 4
-  - requiredScore: 3000
+  - requiredScore: 3500
     gems: 5
-  - requiredScore: 3000
+  - requiredScore: 3750
     gems: 6
-  - requiredScore: 3000
-    gems: 7
   - requiredScore: 4000
     gems: 7
   - requiredScore: 5000
     gems: 7
   - requiredScore: 6000
+    gems: 7
+  - requiredScore: 6500
     gems: 7
   currentStage: 0
   requiredScore: 10000
